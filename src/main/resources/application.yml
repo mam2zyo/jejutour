@@ -3,19 +3,19 @@ spring:
     url: jdbc:mysql://localhost:3306/jejutrip?useSSL=false
     driver-class-name: com.mysql.cj.jdbc.Driver
     username: root
-    password:
+    password: iloveu#2much
 
-    sql:
-      init:
-        mode: always
+  sql:
+    init:
+      mode: always
 
-    jpa:
-      database: mysql
-      database-platform: org.hibernate.dialect.MySQLDialect
-      hibernate:
-        show_sql: true
-        format_sql: true
-        ddl-auto: update # validate (배포시)
+  jpa:
+    database: mysql
+    database-platform: org.hibernate.dialect.MySQLDialect
+    hibernate:
+      show_sql: true
+      format_sql: true
+      ddl-auto: update # validate (배포시)
 
     #  datasource:
     #    url: jdbc:h2:mem:testdb
