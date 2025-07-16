@@ -1,0 +1,53 @@
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jejutrip?useSSL=false
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    username: root
+    password:
+
+    sql:
+      init:
+        mode: always
+
+    jpa:
+      database: mysql
+      database-platform: org.hibernate.dialect.MySQLDialect
+      hibernate:
+        show_sql: true
+        format_sql: true
+        ddl-auto: update # validate (배포시)
+
+    #  datasource:
+    #    url: jdbc:h2:mem:testdb
+    #    driver-class-name: org.h2.Driver
+    #    username: sa
+    #    password:
+    #
+    #  # === JPA 설정 추가 ===
+    #  jpa:
+    #    database-platform: org.hibernate.dialect.H2Dialect
+    #    hibernate:
+    #      ddl-auto: update
+    #    show-sql: true
+    #
+    #  # === 기존 H2 콘솔 설정 ===
+    #  h2:
+    #    console:
+    #      enabled: true
+    #      path: /h2-console
+
+  # OAuth2 설정
+#  security:
+#    oauth2:
+#      client:
+#        registration:
+#          google:
+#            client-id:
+#            client-secret:
+#            scope: email, profile, openid
+#            redirect-uri: http://localhost:8080/login/oauth2/code/google
+
+jwt:
+  secret-key: "gjaljgaigahljwljohajldhkajlahglgkalkgajoi3aTlgjalthmlkgalHGalkjhaljhalkjhakg"
+  access-token-expiration-minutes: 30
+  refresh-token-expiration-days: 10
